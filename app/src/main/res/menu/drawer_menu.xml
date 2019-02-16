@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_amis"
+            android:icon="@drawable/ic_friend_list"
+            android:title="@string/listes_des_amis" />
+        <item
+            android:id="@+id/nav_quiz"
+            android:icon="@drawable/ic_quiz"
+            android:title="@string/quiz" />
+        <item
+            android:id="@+id/nav_presence"
+            android:icon="@drawable/ic_qrcode"
+            android:title="@string/qr_code" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/param_tres" />
+        <item
+            android:id="@+id/nav_apropos"
+            android:icon="@drawable/ic_apropos"
+            android:title="@string/a_propos" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/se_d_connecter" />
+    </group>
+
+    <item android:title="@string/communication">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="@string/partager" />
+
+        </menu>
+
+    </item>
+
+</menu>

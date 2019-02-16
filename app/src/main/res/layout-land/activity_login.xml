@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="70dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/icon_community2" />
+
+        <TextView
+            android:id="@+id/community_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:text="Classroom Community"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="38dp"
+        android:scrollbars="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp">
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:background="#fff"
+                android:drawableLeft="@drawable/ic_action_user"
+                android:drawableStart="@drawable/ic_action_user"
+                android:ems="10"
+                android:hint="Nom"
+                android:inputType="textPersonName|textCapWords"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/editText"
+                android:layout_alignStart="@+id/editText"
+                android:layout_below="@id/editText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:drawableLeft="@drawable/ic_lock"
+                android:drawableStart="@drawable/ic_lock"
+                android:ems="10"
+                android:hint="Mot de passe"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_rectangle_pink"
+                android:text="Connexion"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_login"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="10dp"
+                android:text="S'enregistrer ici."
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/editText2"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <!--<RelativeLayout
+        android:id="@+id/layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/myImgView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="img"
+            android:src="@drawable/cadenas"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/fname_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myImgView"
+            android:text="@string/first_name"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/myEdit1_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fname_tv"
+            android:hint="@string/default_first_name"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/lname_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myEdit1_id"
+            android:text="@string/last_name"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/myEdit2_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lname_tv"
+            android:hint="@string/default_last_name"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myEdit2_pwd"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="OnLogin"
+            android:shadowRadius="10"
+            android:text="@string/login"
+            android:textSize="25sp"/>
+   </RelativeLayout>-->
+
+    <!--<RelativeLayout
+        android:id="@+id/layout_choixLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_login"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_fr"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="français"
+            android:src="@drawable/fr"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/img_en"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="anglais"
+            android:src="@drawable/en"
+            android:layout_toLeftOf="@id/img_fr"/>
+    </RelativeLayout>-->
+
+</RelativeLayout>

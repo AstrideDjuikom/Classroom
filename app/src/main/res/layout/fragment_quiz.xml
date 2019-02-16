@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"  android:background="@color/back_relative1">
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_pers1_CIV"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/joueur1"
+            android:contentDescription="TODO"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:id="@+id/nom_pers1_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_nom_pers"
+            android:layout_toEndOf="@+id/img_pers1_CIV"
+            android:layout_toRightOf="@+id/img_pers1_CIV" />
+        <TextView
+            android:id="@+id/score_pers1_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_score"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@+id/nom_pers1_TV"
+            android:layout_toEndOf="@id/img_pers1_CIV"
+            android:layout_toRightOf="@id/img_pers1_CIV" />
+
+
+        <TextView
+            android:id="@+id/id_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temps_restant"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorRouge"/>
+        <ProgressBar
+            android:id="@+id/temps_restant_pbar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/id_tv"
+            android:indeterminate="false"
+            android:max="20"
+            android:progress="20"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_pers2_CIV"
+            android:layout_width="60dp"
+            android:layout_height="63dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/joueur2"
+            android:layout_marginBottom="1dp"
+            android:contentDescription="TODO"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/nom_pers2_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_nom_pers"
+            android:layout_toStartOf="@+id/img_pers2_CIV"
+            android:layout_toLeftOf="@+id/img_pers2_CIV" />
+        <TextView
+            android:id="@+id/score_pers2_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_score"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@+id/nom_pers2_TV"
+            android:layout_toStartOf="@id/img_pers2_CIV"
+            android:layout_toLeftOf="@id/img_pers2_CIV" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/question_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quel_technologie_permet_de_se_connecter_un_r_seau_sans_fil"
+        android:gravity="center"
+        android:layout_below="@+id/relative1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/color_nom_pers"
+        android:textSize="25sp"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/question_TV">
+        <RelativeLayout
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/proposition1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_btn_question"
+                android:shadowRadius="20"
+                android:text="@string/qsm"
+                android:layout_margin="10dp" />
+            <Button
+                android:id="@+id/proposition2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_btn_question"
+                android:shadowRadius="20"
+                android:text="@string/infrarouge"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/proposition1"/>
+            <Button
+                android:id="@+id/proposition3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_btn_question"
+                android:shadowRadius="20"
+                android:layout_margin="10dp"
+                android:text="@string/bluetooth"
+                android:layout_below="@+id/proposition2"/>
+            <Button
+                android:id="@+id/proposition4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/background_btn_question"
+                android:shadowRadius="20"
+                android:text="@string/wifi"
+                android:layout_below="@+id/proposition3"/>
+
+            <Button
+                android:id="@+id/arrondis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorAccent"
+                android:shadowRadius="20"
+                android:text="@string/arrondis"
+                android:layout_below="@+id/proposition4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowColor="@color/colorPrimary"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
