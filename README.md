@@ -30,6 +30,10 @@ QUELQUES DETAILS D'IMPLEMENTATION
 
 -Un écran de préférence pour gérer les personnalisations de l'utilisateur
 
+-Affichage en mode portrait et landscape
+
+-Gestion de l'internationnalisation; d'où cette application est disponible en Français et en Anglais.
+
 -Possibilité de se connecter(connexion réalisée avec la librairie Volley) et de se déconnecter de l'application
 
 -ProgressBar de décompte de temps  lors d'un quiz
@@ -38,6 +42,19 @@ QUELQUES DETAILS D'IMPLEMENTATION
 
 -Usage des intents et des Async Tasks
 
-Les captures ci-dessous presentent quelques interfaces ded l'application:
+Les captures ci-dessous presentent quelques interfaces de l'application:
 
+![loginScreen](screenshots/loginScreen.png)
+
+![drawer](screenshots/drawer.png)
+
+![preferenceScreen](screenshots/preferenceScreen.png)
+
+![quiz](screenshots/quiz.png)
+
+![apropos](screenshots/apropos.png)
+
+![qrcode](screenshots/qrcode.png)
+
+![friendsList](screenshots/friendsList.png)
 
