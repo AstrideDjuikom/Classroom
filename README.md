@@ -12,12 +12,17 @@ duel est lancé avec celui-ci. Une question d'un quiz s'affiche à l'utilisateur
 GETTING STARTED!
 
 Pour commencer, il faut cloner le projet dans le repositoire local de votre machine.
-Lien:
+
+Lien:https://github.com/AstrideDjuikom/Classroom.git
+
 Ouvrir le projet dans votre android studio. Puis synchroniser si nécessaire
+
 Avoir XAMPP, WAMPP ou tout autre equivalent installé pour gérer la partie serveur.
 
 minSdkVersion: 15
+
 targetSdkVersion: 28
+
 compileSdkVersion : 28
 
 QUELQUES DETAILS D'IMPLEMENTATION
@@ -33,6 +38,8 @@ QUELQUES DETAILS D'IMPLEMENTATION
 -Affichage en mode portrait et landscape
 
 -Gestion de l'internationnalisation; d'où cette application est disponible en Français et en Anglais.
+
+-Vérification des entrées utilisateurs
 
 -Possibilité de se connecter(connexion réalisée avec la librairie Volley) et de se déconnecter de l'application
 
